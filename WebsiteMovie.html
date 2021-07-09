@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../Prepared library/grid.css">
+	<style>
+      * {
+        box-sizing: border-box;
+        background-color: skyblue;
+      }
+      .col {
+        text-align: center;
+        background-color: #ccc;
+        background-clip: content-box;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        height: 350px;
+      }
+      .content {
+      	width: 1200px;
+      }
+      .average{
+      	float: right;
+        font-size: 20px;
+      }
+      .release-date{
+      	margin-bottom: 0px;
+
+      }
+      .db_handle{
+        float: right;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+</head>
+<body>
+	
+    
+  <div>
+  	<input type="text" name="Thanh tìm kiếm" placeholder="Nhập tên phim" id="thanhtimkiem">
+  	<input type="button" name="Nút tìm kiếm"
+    	id="nuttimkiem" value="Hiển thị" onclick="getTitle()">
+    	
+  </div>
+  <nav class="db_handle">
+    <input type="button" value="Thêm" id="add" onclick="Add()">
+    <input type="button" value="Sửa" id="update" onclick="Update()">
+    <input type="button" value="Xóa" id="delete" onclick="Delete()">
+  </nav>
+	<div id="Title"></div>
+	<input type="button" value="Upcoming" onclick="renderUpcoming()">
+	<input type="button" value="Now playing" onclick="renderNowplaying()">
+	<input type="button" value="Top rated" onclick="renderToprated()">
+  <div class="content">
+	  <div class="row">
+		
+	  </div>
+	
+  </div>
+
+
+
+
+	<script type="text/javascript" src="CallAPI.js">
+	</script>
+  
+  
+</body>
+</html>
